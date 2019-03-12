@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: consumer
+server:
+  port: 8762
+
+demo:
+  service:
+    version: 1.0.0
+
+embedded:
+  zookeeper:
+    port: 2181
+
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:${embedded.zookeeper.port}
